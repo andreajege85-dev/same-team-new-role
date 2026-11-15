@@ -1,8 +1,8 @@
 /* Update these paths when final media is ready. No build step is required. */
 window.COURSE_MEDIA = {
-  introVideo: 'Intro_Vid_204.mp4',
+  introVideo: 'assets/intro/intro-stnr-v1.mp4',
   // Change this revision whenever you replace the video, even at the same path.
-  introRevision: 'Intro_Vid_204-draft-26367992',
+  introRevision: 'Intro_Video_STNR-2026-11-14-v1',
   // Set this to the verified WebVTT file once the actual audio is transcribed.
   introCaptions: '',
   greetingVideo: '',
