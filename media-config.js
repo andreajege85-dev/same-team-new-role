@@ -7,7 +7,7 @@ window.COURSE_MEDIA = {
   introCaptions: 'assets/captions/intro.en.vtt',
   greetingVideo: '',
   greetingCaptions: '',
-  plannerUrl: '',
+  plannerUrl: 'https://kittybumbot.github.io/same-team-different-role-jobaid/',
   d2BridgeAudio: 'assets/scenario/d2-bridge-v1.mp3',
   d1cBridgeAudio: 'assets/scenario/d1c-bridge-v1.mp3',
   // Shared employee continuation audio, reused for all choices in a decision.
