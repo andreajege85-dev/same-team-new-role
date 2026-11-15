@@ -110,7 +110,7 @@ html+='<div id="reaction-stage" '+(supervisorAudio&&!state.feedbackShown?'hidden
 html+=mediaSettings(key).video?video(key):`<div class="reaction-placeholder" data-reaction="${key}"><div class="eyebrow">ANDRETTI HUSSEGE · ${key.toUpperCase()}</div><span class="reaction-play" aria-hidden="true">▷</span><h3>Andretti Hussege reaction video</h3><p class="notice">Video clip pending. Read the employee’s response below to continue.</p><span class="notice">Captions and video replay will be available when this clip is supplied.</span></div>`;
 html+=bubble('Employee',choice.reaction)+'</div>';
 html+=`<div class="actions">${btn('Replay Interaction','replay-interaction',true)}${btn(mediaSettings(key).video?'Read Reaction & Continue to Feedback':'Continue to Feedback','show-feedback',true)}</div>`;
-html+=`<div id="branch-feedback" ${state.feedbackShown?'':'hidden'}><div class="feedback"><div class="eyebrow">CONVERSATION INSIGHT</div><p>${esc(choice.feedback)}</p></div>${state.decision===2?continuation(state.decision):''}`;
+html+=`<div id="branch-feedback" ${state.feedbackShown?'':'hidden'}><div class="feedback"><div class="eyebrow">CONVERSATION INSIGHT</div><p>${esc(choice.feedback)}</p></div>${state.decision===2&&state.selection===0?continuation(state.decision):''}`;
 if(state.decision===2)html+=`<p>Effective feedback is specific, respectful, and focused on improvement.</p><div class="actions">${btn('Try a Different Approach','retry',true)}${btn('Continue to Reflection','scenario-reflection')}</div>`;
 else html+=`<div class="actions">${btn('Continue Conversation','next-decision')}${btn('Try Another Approach','retry',true)}</div>`;
 html+='</div>';
