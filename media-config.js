@@ -8,6 +8,7 @@ window.COURSE_MEDIA = {
   greetingVideo: '',
   greetingCaptions: '',
   plannerUrl: '',
+  d2BridgeAudio: 'assets/scenario/d2-bridge-v1.mp3',
   d1cBridgeAudio: 'assets/scenario/d1c-bridge-v1.mp3',
   // Shared employee continuation audio, reused for all choices in a decision.
   followUps: { d1: 'assets/scenario/d1-followup-v1.mp3', d2: 'assets/scenario/d2-followup-v1.mp3', d3: 'assets/scenario/d3-followup-v1.mp3' },

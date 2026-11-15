@@ -30,9 +30,15 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch{docum
 function btn(label,action,secondary=false){return `<button class="${secondary?'secondary':'primary'}" data-action="${action}">${esc(label)}${secondary?'':' <span aria-hidden="true">→</span>'}</button>`;}
 function sectionHeader(label,time){return `<div class="section-top"><span>${label}</span><span>${time} · SELF-PACED</span></div>`;}
 function bubble(who,text){return `<div class="dialogue ${who==='You'?'you':''}"><div class="bubble"><small>${who==='You'?'YOU · SUPERVISOR':'ANDRETTI HUSSEGE · EMPLOYEE'}</small><p>${esc(text)}</p></div></div>`;}
+function continuationBridge(decision){
+ if(decision===0&&state.history[0]===2)return {audio:CONFIG.d1cBridgeAudio,text:"Okay, vacations aside... yes, the last two Friday reports came in after noon. I'd like to understand what's getting in the way of finishing them."};
+ if(decision===1)return {audio:CONFIG.d2BridgeAudio,text:"What could you change about when you start the report, and what would help you protect that time?"};
+ return null;
+}
 function continuation(decision){
  const src=CONFIG.followUps?.['d'+(decision+1)];
- const bridge=decision===0&&state.history[0]===2?bubble('You',"Okay, vacations aside... yes, the last two Friday reports came in after noon. I'd like to understand what's getting in the way of finishing them.")+(CONFIG.d1cBridgeAudio?'<div class="supervisor-audio"><label for="bridge-audio">Supervisor follow-up</label><audio id="bridge-audio" controls preload="metadata" src="'+esc(CONFIG.d1cBridgeAudio)+'" aria-label="Supervisor transition after Choice 1C"></audio></div>':''):'';
+ const bridgeInfo=continuationBridge(decision);
+ const bridge=bridgeInfo?bubble('You',bridgeInfo.text)+(bridgeInfo.audio?'<div class="supervisor-audio"><label for="bridge-audio">Supervisor follow-up</label><audio id="bridge-audio" controls preload="metadata" src="'+esc(bridgeInfo.audio)+'" aria-label="Supervisor transition before Andretti’s follow-up"></audio></div>':''):'';
  return bridge+bubble('Employee',decisions[decision].merge)+(src?'<div class="supervisor-audio"><label for="followup-audio">Listen to Andretti’s follow-up</label><audio id="followup-audio" controls preload="metadata" src="'+esc(src)+'" aria-label="Andretti Hussege shared follow-up"></audio><p class="notice" id="followup-status" role="status"></p></div>':'');
 }
 function mediaSettings(kind){return CONFIG.reactions?.[kind]||{video:CONFIG[kind+'Video'],captions:CONFIG[kind+'Captions']};}
@@ -155,7 +161,7 @@ function replayInteraction(){
  if(state.page!==3||state.selection===null)return;
  state.feedbackShown=false;save();render();return startInteraction();
 }
-function hasBridge(){return state.page===3&&state.decision===1&&state.selection===null&&state.history[0]===2&&!!CONFIG.d1cBridgeAudio;}
+function hasBridge(){return state.page===3&&state.decision>0&&state.selection===null&&!!continuationBridge(state.decision-1)?.audio;}
 function bindBridgeAudio(){
  if(!hasBridge())return;
  const bridge=main.querySelector('#bridge-audio'),revision=interactionRevision;
