@@ -4,7 +4,7 @@ window.COURSE_MEDIA = {
   // Change this revision whenever you replace the video, even at the same path.
   introRevision: 'Intro_Video_STNR-2026-11-14-v1',
   // Set this to the verified WebVTT file once the actual audio is transcribed.
-  introCaptions: '',
+  introCaptions: 'assets/captions/intro.en.vtt',
   greetingVideo: '',
   greetingCaptions: '',
   plannerUrl: '',
@@ -14,14 +14,14 @@ window.COURSE_MEDIA = {
   followUps: { d1: 'assets/scenario/d1-followup-v1.mp3', d2: 'assets/scenario/d2-followup-v1.mp3', d3: 'assets/scenario/d3-followup-v1.mp3' },
   // Nine separate slots. Set video and captions paths as each reaction clip is supplied.
   reactions: {
-    'd1-a': { video: 'assets/scenario/d1-a-v2.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d1a-v1.mp3', supervisorAudioFile: 'Supervisor_D1A.mp3' },
-    'd1-b': { video: 'assets/scenario/d1-b-v3.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d1b-v1.mp3', supervisorAudioFile: 'D1_Supervisor_B.mp3' },
-    'd1-c': { video: 'assets/scenario/d1-c-v3.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d1c-v1.mp3', supervisorAudioFile: 'D1_Supervisor_C.mp3' },
-    'd2-a': { video: 'assets/scenario/d2-a-v1.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d2a-v1.mp3', supervisorAudioFile: 'D2_OA.mp3' },
-    'd2-b': { video: 'assets/scenario/d2-b-v2.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d2b-v1.mp3', supervisorAudioFile: 'D2_Supervisor_B.mp3' },
-    'd2-c': { video: 'assets/scenario/d2-c-v2.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d2c-v1.mp3', supervisorAudioFile: 'D2_Supervisor_C.mp3' },
-    'd3-a': { video: 'assets/scenario/d3-a-v1.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d3a-v1.mp3', supervisorAudioFile: 'D3_Supervisor_A.mp3' },
-    'd3-b': { video: 'assets/scenario/d3-b-v2.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d3b-v1.mp3', supervisorAudioFile: 'D3_Supervisor_B.mp3' },
-    'd3-c': { video: 'assets/scenario/d3-c-v1.mp4', captions: '', supervisorAudio: 'assets/scenario/supervisor-d3c-v1.mp3', supervisorAudioFile: 'D3_Supervisor_C.mp3' }
+    'd1-a': { video: 'assets/scenario/d1-a-v2.mp4', captions: 'assets/captions/d1-a.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d1a-v1.mp3', supervisorAudioFile: 'Supervisor_D1A.mp3' },
+    'd1-b': { video: 'assets/scenario/d1-b-v3.mp4', captions: 'assets/captions/d1-b.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d1b-v1.mp3', supervisorAudioFile: 'D1_Supervisor_B.mp3' },
+    'd1-c': { video: 'assets/scenario/d1-c-v3.mp4', captions: 'assets/captions/d1-c.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d1c-v1.mp3', supervisorAudioFile: 'D1_Supervisor_C.mp3' },
+    'd2-a': { video: 'assets/scenario/d2-a-v1.mp4', captions: 'assets/captions/d2-a.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d2a-v1.mp3', supervisorAudioFile: 'D2_OA.mp3' },
+    'd2-b': { video: 'assets/scenario/d2-b-v2.mp4', captions: 'assets/captions/d2-b.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d2b-v1.mp3', supervisorAudioFile: 'D2_Supervisor_B.mp3' },
+    'd2-c': { video: 'assets/scenario/d2-c-v2.mp4', captions: 'assets/captions/d2-c.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d2c-v1.mp3', supervisorAudioFile: 'D2_Supervisor_C.mp3' },
+    'd3-a': { video: 'assets/scenario/d3-a-v1.mp4', captions: 'assets/captions/d3-a.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d3a-v1.mp3', supervisorAudioFile: 'D3_Supervisor_A.mp3' },
+    'd3-b': { video: 'assets/scenario/d3-b-v2.mp4', captions: 'assets/captions/d3-b.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d3b-v1.mp3', supervisorAudioFile: 'D3_Supervisor_B.mp3' },
+    'd3-c': { video: 'assets/scenario/d3-c-v1.mp4', captions: 'assets/captions/d3-c.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d3c-v1.mp3', supervisorAudioFile: 'D3_Supervisor_C.mp3' }
   }
 };

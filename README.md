@@ -8,4 +8,4 @@ All media is stored in this repository. No build step or secrets are required.
 
 Progress is stored only in the learner's browser and does not transfer between hosting addresses.
 
-Verified English caption files are still pending.
+English WebVTT captions are included for the intro and all nine reaction videos, derived from the supplied Premiere SRT. Intro speaker and sound-cue review remains pending.
