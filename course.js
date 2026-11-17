@@ -1,5 +1,5 @@
 /* Original instructional text: content.js. Approved revised scenario: scenario-content.js. */
-const CONFIG = { introVideo: '', introRevision: '', greetingVideo: '', introCaptions: '', greetingCaptions: '', plannerUrl: '', ...window.COURSE_MEDIA };
+const CONFIG = { introVideo: '', introRevision: '', greetingVideo: '', introCaptions: '', greetingCaptions: '', plannerUrl: '', surveyUrl: '', ...window.COURSE_MEDIA };
 const P=window.APPROVED_SCRIPT;
 const clean=s=>s.replace(/^"|"$/g,'');
 const t=i=>clean(P[i]);
@@ -28,6 +28,11 @@ const main=document.querySelector('main');
 let interactionRevision=0;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch{document.querySelector('.save-note').textContent='Self-paced · Browser storage unavailable';}}
 function btn(label,action,secondary=false){return `<button class="${secondary?'secondary':'primary'}" data-action="${action}">${esc(label)}${secondary?'':' <span aria-hidden="true">→</span>'}</button>`;}
+function completionSurvey(){
+ if(!CONFIG.surveyUrl)return '';
+ const embed=new URL(CONFIG.surveyUrl);embed.searchParams.set('embedded','true');
+ return '<section class="completion-survey" aria-labelledby="survey-heading"><div class="eyebrow">COURSE FEEDBACK</div><h2 id="survey-heading">Share your feedback</h2><p>Tell us how the training worked for you. Your training is already complete; submitting this survey is optional.</p><p class="notice">Responses are submitted through Google Forms.</p><p><a class="secondary" href="'+esc(CONFIG.surveyUrl)+'" target="_blank" rel="noopener noreferrer">Open survey in a new tab <span aria-hidden="true">↗</span></a></p><iframe class="survey-frame" src="'+esc(embed.href)+'" title="Same Team, New Role course feedback survey" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">Open the survey using the link above.</iframe></section>';
+}
 function sectionHeader(label,time){return `<div class="section-top"><span>${label}</span><span>${time} · SELF-PACED</span></div>`;}
 function bubble(who,text){return `<div class="dialogue ${who==='You'?'you':''}"><div class="bubble"><small>${who==='You'?'YOU · SUPERVISOR':'ANDRETTI HUSSEGE · EMPLOYEE'}</small><p>${esc(text)}</p></div></div>`;}
 function continuationBridge(decision){
@@ -121,7 +126,7 @@ if(state.decision>0||state.selection!==null)html+='<div class="actions">'+btn('B
 }else if(state.page===5){html=sectionHeader('06 / REVIEW','PART OF YOUR 2-MINUTE REFLECTION')+`<h1>Three Things to Remember</h1>${para(160)}<ol class="objectives">${[161,162,163].map(i=>`<li>${esc(t(i))}</li>`).join('')}</ol>${para(164)}<h2>A moment to recall</h2><p class="notice">Select each prompt to reveal the answer. No score is assigned.</p>`;
 html+=[166,168,170].map((i,k)=>`<details data-reveal="recap" data-index="${k}" ${state.recap.includes(k)?'open':''}><summary>${esc(clean(P[i].replace(/^Prompt \d: /,'')))}</summary><p>${esc(clean(P[i+1].replace('[REVEAL] ','')))}</p></details>`).join('');
 html+=`<div class="intro-copy">${range(174,175)}</div><div class="actions">${btn('Complete Training','complete')}</div>`;
-}else if(state.page===6){html=sectionHeader('YOUR LEARNING JOURNEY','COMPLETE')+`<div class="completion-mark" aria-hidden="true">✓</div><h1>Training Complete!</h1><p class="lede">Same Team, New Role: Giving Feedback That Works</p><div class="completion"><div class="eyebrow">TAKE IT INTO YOUR NEXT CONVERSATION</div>${range(174,175)}</div><p class="notice">The 20-minute training ends here. The Conversation Planner is introduced after completion and is not required.</p><div class="actions">${btn('Replay the Scenario','replay',true)}${btn('Explore Optional Conversation Planner','planner')}</div>`;
+}else if(state.page===6){html=sectionHeader('YOUR LEARNING JOURNEY','COMPLETE')+`<div class="completion-mark" aria-hidden="true">✓</div><h1>Training Complete!</h1><p class="lede">Same Team, New Role: Giving Feedback That Works</p><div class="completion"><div class="eyebrow">TAKE IT INTO YOUR NEXT CONVERSATION</div>${range(174,175)}</div><p class="notice">The 20-minute training ends here. The Conversation Planner is introduced after completion and is not required.</p><div class="actions">${btn('Replay the Scenario','replay',true)}${btn('Explore Optional Conversation Planner','planner')}</div>${completionSurvey()}`;
 }else{html=sectionHeader('OPTIONAL RESOURCE','OUTSIDE TRAINING TIME')+`<h1>Interactive Conversation Planner</h1><p class="lede">${esc(t(186))}</p><p class="notice">This separate resource is optional. Its use is not included in the 20-minute training duration.</p><div class="actions">${btn('Open Interactive Conversation Planner','open-planner')}${btn('Back to Completion','back-complete',true)}</div><p id="planner-status" role="status" class="notice">${CONFIG.plannerUrl?'Opens the separate Conversation Planner application.':'The Conversation Planner has not been connected yet.'}</p>`;}
 main.innerHTML=`<section>${html}</section>`;
 bindVideo();

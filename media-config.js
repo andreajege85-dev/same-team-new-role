@@ -7,6 +7,7 @@ window.COURSE_MEDIA = {
   introCaptions: 'assets/captions/intro.en.vtt',
   greetingVideo: '',
   greetingCaptions: '',
+  surveyUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdktorQGK03Uy3SV-667YirECJ6mSTfZVhv5VR0IBIjmeh4Cg/viewform',
   plannerUrl: 'https://kittybumbot.github.io/same-team-different-role-jobaid/',
   d2BridgeAudio: 'assets/scenario/d2-bridge-v1.mp3',
   d1cBridgeAudio: 'assets/scenario/d1c-bridge-v1.mp3',
