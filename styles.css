@@ -14,3 +14,6 @@
 
 /* Embedded post-course feedback; completion never depends on survey submission. */
 .completion-survey{border-top:1px solid var(--line);margin-top:48px;padding-top:30px}.completion-survey h2{margin-top:10px}.survey-frame{display:block;width:100%;height:1100px;border:1px solid var(--line);border-radius:12px;background:#fff;margin-top:22px}@media(max-width:620px){.survey-frame{height:1250px}.completion-survey{margin-top:34px}}
+
+/* Short instruction and practice before the existing card sort. */
+.facts-definitions{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.facts-definitions>section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px}.facts-definitions h2,.facts-practice h2{font-size:21px;letter-spacing:-.3px;margin:0 0 10px}.facts-definitions p{margin:0 0 14px}.facts-definitions blockquote{margin:0;border-left:3px solid #8aa665;padding-left:14px;font-size:17px}.facts-practice{margin-top:25px}.facts-practice .eyebrow{margin-bottom:8px}.facts-practice .choice[aria-pressed="true"]{border-color:var(--green);background:#e8eee2;box-shadow:inset 3px 0 var(--green)}@media(max-width:720px){.facts-definitions{grid-template-columns:1fr;gap:12px}.facts-definitions>section{padding:18px}.facts-practice h2{font-size:20px}}
