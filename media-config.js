@@ -17,12 +17,12 @@ window.COURSE_MEDIA = {
   reactions: {
     'd1-a': { video: 'assets/scenario/d1-a-v2.mp4', captions: 'assets/captions/d1-a.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d1a-v1.mp3', supervisorAudioFile: 'Supervisor_D1A.mp3' },
     'd1-b': { video: 'assets/scenario/d1-b-v3.mp4', captions: 'assets/captions/d1-b.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d1b-v1.mp3', supervisorAudioFile: 'D1_Supervisor_B.mp3' },
-    'd1-c': { video: 'assets/scenario/d1-c-v3.mp4', captions: 'assets/captions/d1-c.en.vtt', supervisorAudio: '', supervisorAudioFile: 'D1_Supervisor_C_v2.mp3' },
+    'd1-c': { video: 'assets/scenario/d1-c-v3.mp4', captions: 'assets/captions/d1-c.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d1c-v2.mp3', supervisorAudioFile: 'VO_Supervisor_D1_C.mp3' },
     'd2-a': { video: 'assets/scenario/d2-a-v1.mp4', captions: 'assets/captions/d2-a.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d2a-v1.mp3', supervisorAudioFile: 'D2_OA.mp3' },
-    'd2-b': { video: 'assets/scenario/d2-b-v2.mp4', captions: 'assets/captions/d2-b.en.vtt', supervisorAudio: '', supervisorAudioFile: 'D2_Supervisor_B_v2.mp3' },
+    'd2-b': { video: 'assets/scenario/d2-b-v2.mp4', captions: 'assets/captions/d2-b.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d2b-v2.mp3', supervisorAudioFile: 'VO_Supervisor_D2_B.mp3' },
     'd2-c': { video: 'assets/scenario/d2-c-v2.mp4', captions: 'assets/captions/d2-c.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d2c-v1.mp3', supervisorAudioFile: 'D2_Supervisor_C.mp3' },
     'd3-a': { video: 'assets/scenario/d3-a-v1.mp4', captions: 'assets/captions/d3-a.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d3a-v1.mp3', supervisorAudioFile: 'D3_Supervisor_A.mp3' },
     'd3-b': { video: 'assets/scenario/d3-b-v2.mp4', captions: 'assets/captions/d3-b.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d3b-v1.mp3', supervisorAudioFile: 'D3_Supervisor_B.mp3' },
-    'd3-c': { video: 'assets/scenario/d3-c-v1.mp4', captions: 'assets/captions/d3-c.en.vtt', supervisorAudio: '', supervisorAudioFile: 'D3_Supervisor_C_v2.mp3' }
+    'd3-c': { video: 'assets/scenario/d3-c-v1.mp4', captions: 'assets/captions/d3-c.en.vtt', supervisorAudio: 'assets/scenario/supervisor-d3c-v2.mp3', supervisorAudioFile: 'VO_Supervisor_D3_C.mp3' }
   }
 };
