@@ -1,4 +1,4 @@
-/* Revised dialogue supplied November 14, 2026. */
+/* Current approved branching dialogue; three supervisor choices revised November 17, 2026. */
 window.REVISED_SCENARIO = [
   {
     "title": "Opening the Conversation",
@@ -17,9 +17,9 @@ window.REVISED_SCENARIO = [
         "feedback": "Sarcasm may seem harmless, especially between former peers, but it can make an employee feel criticized rather than supported. Focus on the missed deadlines without making the conversation personal."
       },
       {
-        "say": "So, how's everything going? Surviving the Friday chaos? Because honestly, I think we all deserve a vacation.",
+        "say": "Andretti, before we get into anything else, how are you holding up with the Friday workload? I know things have been pretty hectic lately. Honestly, I think we're all overdue for a vacation.",
         "reaction": "Ha! Seriously. Anyway, what's up? You needed something?",
-        "feedback": "Humor can ease tension, but avoiding the performance concern leaves the employee unsure why the meeting was called. A friendly tone should still include a clear description of the performance issue."
+        "feedback": "This approach builds rapport and acknowledges workload pressures, but it doesn't clearly introduce the missed deadlines. A supportive opening is useful, provided the supervisor transitions into a specific discussion of the performance concern."
       }
     ]
   },
@@ -35,9 +35,9 @@ window.REVISED_SCENARIO = [
         "feedback": "Establishes a clear deadline and a way to resolve conflicts, while revealing the need for a backup arrangement."
       },
       {
-        "say": "Look, I get it. Fridays are basically a circus around here. Just try to stay on top of things, and we'll call it good.",
+        "say": "I know you've been juggling a lot, and I appreciate the effort you're putting in. Let's make sure the Friday reports are submitted by noon. I'd like you to manage the other requests as they come in and use your best judgment about what needs immediate attention.",
         "reaction": "Okay... I'll do my best. But I'm still not sure what you want me to do when everything feels urgent.",
-        "feedback": "Acknowledges workplace pressure but does not establish a clear expectation or process for prioritizing competing requests."
+        "feedback": "This approach acknowledges effort, reinforces the deadline, and encourages independence. However, it leaves Andretti without clear guidance for handling competing urgent requests. Autonomy works best when expectations and escalation procedures are understood."
       },
       {
         "say": "Andretti, it's a report, not a rocket launch. I really shouldn't have to explain how deadlines work.",
@@ -63,9 +63,9 @@ window.REVISED_SCENARIO = [
         "feedback": "Threatening consequences without addressing known barriers does not create a realistic improvement plan. Accountability should include clear steps, available support, and reasonable follow-up."
       },
       {
-        "say": "Alright, let's just see how Friday goes. I'm sure you'll figure something out. Positive thinking, right?",
+        "say": "I'd like you to take ownership of the next report and apply what we've discussed. Let's see how the new approach works this Friday, and we can make adjustments if needed. I think that gives us a good starting point.",
         "reaction": "Uh, sure. I'll give it a shot. So... are we done?",
-        "feedback": "An encouraging tone cannot replace a measurable action plan. Without agreed-upon responsibilities, checkpoints, or a follow-up date, both parties may leave with different expectations."
+        "feedback": "This approach encourages ownership and allows for adjustments, but doesn't establish specific checkpoints, a process for communicating obstacles, or a scheduled follow-up. Employee independence should be supported by clear expectations and accountability."
       }
     ]
   }
