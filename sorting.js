@@ -18,7 +18,7 @@ function sortScore(){return state.sortRound.answers.filter((answer,i)=>answer===
 function sortPage(){
  ensureSortRound();const round=state.sortRound,n=round.answers.length,score=sortScore();
  save();
- let html=sectionHeader('03 / SORT THE STATEMENTS','4 MIN')+'<h1>Facts or characterizations?</h1><p class="lede">Some feedback sounds specific until you look a little closer.</p><p>Sort each statement as <strong>observable behavior</strong> or a <strong>characterization</strong>. Classify all <strong>10 statements</strong>, then select <strong>Submit Round</strong> to see your accuracy. Score at least <strong>8 out of 10 (80%)</strong> to continue to training, or choose another practice round. Each card counts once; feedback follows your choice.</p>';
+ let html=routeHeader('sorting','10 STATEMENTS')+'<h1>Facts or characterizations?</h1><p class="lede">Some feedback sounds specific until you look a little closer.</p><p>Sort each statement as <strong>observable behavior</strong> or a <strong>characterization</strong>. Classify all <strong>10 statements</strong>, then select <strong>Submit Round</strong> to see your accuracy. Score at least <strong>8 out of 10 (80%)</strong> to continue to training, or choose another practice round. Each card counts once; feedback follows your choice.</p>';
  html+=sortTracker();
  if(n===SORT_ROUND_SIZE&&!round.submitted){html+='<div class="sort-result"><h2>Ready to submit?</h2><p>You have answered all 10 statements. Submit your round to see your percentage and next steps.</p><div class="actions">'+btn('Submit Round','sort-submit')+'</div></div>';}
  else if(n===SORT_ROUND_SIZE){const passed=score/SORT_ROUND_SIZE>=SORT_PASS_ACCURACY;
